@@ -55,6 +55,14 @@ qingchu.onclick = function() {
 	alert("清除成功");
 };
 
+var shanchu = document.getElementById('shanchu');
+shanchu.onclick = function() {
+
+	gname.splice($.inArray("222", gname), 1); 
+	localStorage.setItem('group_name', JSON.stringify(gname));
+	alert("删除成功");
+};
+
 var zairu = document.getElementById('zairu');
 zairu.onclick = function() {
 groups = ["222", "111", "333", "444", "666", "555"];
