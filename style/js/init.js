@@ -3,8 +3,13 @@ var storage = window.localStorage;
 //var urls = JSON.parse(localStorage.getItem('aurl'));
 //var names = JSON.parse(localStorage.getItem('aname'));
 var groups = JSON.parse(localStorage.getItem('group_name'));
-console.log(groups);
+
 var AddHtml = new Array();　
+
+for (var i = 0; i <= groups.length - 1; i++) {
+	var names = JSON.parse(localStorage.getItem('names'+groups[i]));
+	console.log(names);
+}
 
 /*初始化界面 开始*/
 
