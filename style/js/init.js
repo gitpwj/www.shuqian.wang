@@ -9,7 +9,7 @@ var AddHtml = new Array();　
 for (var i = 0; i <= groups.length - 1; i++) {
 	AddHtml[i] = "";
 	var names = JSON.parse(localStorage.getItem('names_'+groups[i]));
-	var urls = JSON.parse(localStorage.getItem('urls'+groups[i]));
+	var urls = JSON.parse(localStorage.getItem('urls_'+groups[i]));
 	if(!names == false ){
 		//console.log(names);		
 		//console.log(urls);
