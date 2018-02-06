@@ -90,6 +90,22 @@ zairu.onclick = function() {
 	localStorage.setItem('names_111', JSON.stringify(names_111));
 	urls_111 = ["n1", "n2", "n3"];
 	localStorage.setItem('urls_111', JSON.stringify(urls_111));
+	names_333 = ["n4", "n5", "n6"];
+	localStorage.setItem('names_333', JSON.stringify(names_333));
+	urls_333 = ["n4", "n5", "n6"];
+	localStorage.setItem('urls_333', JSON.stringify(urls_333));
+	names_666 = ["n1", "n2", "n3"];
+	localStorage.setItem('names_666', JSON.stringify(names_666));
+	urls_666 = ["n1", "n2", "n3"];
+	localStorage.setItem('urls_666', JSON.stringify(urls_666));
+	names_444 = ["n4", "n5", "n6"];
+	localStorage.setItem('names_444', JSON.stringify(names_444));
+	urls_444 = ["n4", "n5", "n6"];
+	localStorage.setItem('urls_444', JSON.stringify(urls_444));
+	names_555 = ["n1", "n2", "n3"];
+	localStorage.setItem('names_555', JSON.stringify(names_555));
+	urls_555 = ["n1", "n2", "n3"];
+	localStorage.setItem('urls_555', JSON.stringify(urls_555));
 
 	
 	
