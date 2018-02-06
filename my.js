@@ -55,8 +55,8 @@ qingchu.onclick = function() {
 	alert("清除成功");
 };
 
-var qingchu = document.getElementById('zairu');
-qingchu.onclick = function() {
+var zairu = document.getElementById('zairu');
+zairu.onclick = function() {
 groups = ["222", "111", "333", "444", "666", "555"];
 
 names = ["|", "n1", "n2", "n3", "|", "n4", "n5", "n6", "|", "n7", "n8", "n9", "|", "n10", "n11", "n12", "|", "n13", "n14", "n15", "|", "n16", "n17", "n18"];
