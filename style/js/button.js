@@ -1,7 +1,11 @@
-function js_del_zu(zu)
+/* 删除组的方法*/
+function js_del_zu(zu_name)
 {
-alert("Hello World!");
-alert(zu);
+	gname = JSON.parse(localStorage.getItem('group_name'));
+	gname.splice($.inArray(zu_name, gname), 1); 
+	localStorage.setItem('group_name', JSON.stringify(gname));
+	alert("删除成功");
+	location.reload();
 }
 
 var baocun = document.getElementById('baocun');
@@ -72,13 +76,16 @@ shanchu.onclick = function() {
 
 var zairu = document.getElementById('zairu');
 zairu.onclick = function() {
-groups = ["222", "111", "333", "444", "666", "555"];
-
-names = ["|", "n1", "n2", "n3", "|", "n4", "n5", "n6", "|", "n7", "n8", "n9", "|", "n10", "n11", "n12", "|", "n13", "n14", "n15", "|", "n16", "n17", "n18"];
-urls = ["|", "n1", "n2", "n3", "|", "n4", "n5", "n6", "|", "n7", "n8", "n9", "|", "n10", "n11", "n12", "|", "n13", "n14", "n15", "|", "n16", "n17", "n18"];
-		localStorage.setItem('aname', JSON.stringify(names));
+	groups = ["222", "111", "333", "444", "666", "555"];
 	localStorage.setItem('group_name', JSON.stringify(groups));
-	localStorage.setItem('aurl', JSON.stringify(urls));
+	//names = ["|", "n1", "n2", "n3", "|", "n4", "n5", "n6", "|", "n7", "n8", "n9", "|", "n10", "n11", "n12", "|", "n13", "n14", "n15", "|", "n16", "n17", "n18"];
+	//urls = ["|", "n1", "n2", "n3", "|", "n4", "n5", "n6", "|", "n7", "n8", "n9", "|", "n10", "n11", "n12", "|", "n13", "n14", "n15", "|", "n16", "n17", "n18"];
+	//localStorage.setItem('aname', JSON.stringify(names));	
+	//localStorage.setItem('aurl', JSON.stringify(urls));
+	names_222 = ["n4", "n5", "n6"];
+	urls_222 = ["n4", "n5", "n6"];
+	names_111 = ["n1", "n2", "n3"];
+	urls_111 = ["n1", "n2", "n3"];
 	
 };
 

@@ -1,9 +1,9 @@
 var storage = window.localStorage;
 //载入localstoarge 数据
-var urls = JSON.parse(localStorage.getItem('aurl'));
-var names = JSON.parse(localStorage.getItem('aname'));
+//var urls = JSON.parse(localStorage.getItem('aurl'));
+//var names = JSON.parse(localStorage.getItem('aname'));
 var groups = JSON.parse(localStorage.getItem('group_name'));
-console.log(names);
+console.log(groups);
 var AddHtml = new Array();　
 
 /*初始化界面 开始*/
