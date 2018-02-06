@@ -1,3 +1,10 @@
+function showTip() { //提示框 
+    layer.open({ 
+        content: '您好', 
+  
+    }); 
+}
+
 /* 删除组的方法*/
 function js_del_zu(zu_name)
 {
