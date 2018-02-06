@@ -11,7 +11,7 @@ for (var i = 0; i <= groups.length - 1; i++) {
 	var urls = JSON.parse(localStorage.getItem('urls'+groups[i]));
 	if(names.length > 0 )
 		{for (var j = 0; j <= names.length - 1; j++) {
-			AddHtml[j] += "<div class='col-md-3 col-xs-4'><p class='text-center'><a href='" + urls[j] + "' target='_balnk' class='aaa'><img height='60px' width='60px' src='https://www.baidu.com/favicon.ico' alt='...' class='img-circle'><br>	<span class='text1'>" + names[j] + "</span></a></p></div>"
+			AddHtml[i] += "<div class='col-md-3 col-xs-4'><p class='text-center'><a href='" + urls[j] + "' target='_balnk' class='aaa'><img height='60px' width='60px' src='https://www.baidu.com/favicon.ico' alt='...' class='img-circle'><br>	<span class='text1'>" + names[j] + "</span></a></p></div>"
 		}}
 
 	}
