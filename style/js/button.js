@@ -1,3 +1,9 @@
+function js_del_zu(zu)
+{
+alert("Hello World!");
+alert(zu);
+}
+
 var baocun = document.getElementById('baocun');
 baocun.onclick = function() {
 

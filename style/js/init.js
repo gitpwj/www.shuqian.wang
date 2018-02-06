@@ -25,7 +25,7 @@ for (var i = 0; i <= names.length - 1; i++) {
 if (groups != "") {
 	for (var i = 0; i <= groups.length - 1; i++) {
 		var InnerHTML = document.getElementById("multi");
-		InnerHTML.innerHTML += "<div class='col-md-4' data-force='30'><div class='layer tile panel panel-default' data-force='30'><div class='tile__name panel-heading'><a href='http://baidu.com'><span class='glyphicon glyphicon-remove' aria-hidden='true'></span></a>　<span class='panel_title'>" + groups[i] + "</span></div><div class='tile__list panel-body'>" + AddHtml[i] + "</div></div></div>";
+		InnerHTML.innerHTML += "<div class='col-md-4' data-force='30'><div class='layer tile panel panel-default' data-force='30'><div class='tile__name panel-heading'><a href='javascript:void(0);'  onclick='js_del_zu("+ groups[i] +")'><span class='glyphicon glyphicon-remove' aria-hidden='true'></span></a>　<span class='panel_title'>" + groups[i] + "</span></div><div class='tile__list panel-body'>" + AddHtml[i] + "</div></div></div>";
 	}
 }
 //取组结束
