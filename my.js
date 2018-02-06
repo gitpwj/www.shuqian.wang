@@ -57,10 +57,11 @@ qingchu.onclick = function() {
 
 var shanchu = document.getElementById('shanchu');
 shanchu.onclick = function() {
-
+	gname = JSON.parse(localStorage.getItem('group_name'));
 	gname.splice($.inArray("222", gname), 1); 
 	localStorage.setItem('group_name', JSON.stringify(gname));
 	alert("删除成功");
+	location.reload();
 };
 
 var zairu = document.getElementById('zairu');
