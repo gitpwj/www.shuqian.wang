@@ -14,7 +14,7 @@ for (var i = 0; i <= groups.length - 1; i++) {
 		//console.log(names);		
 		//console.log(urls);
 		{for (var j = 0; j <= names.length - 1; j++) {
-			AddHtml[i] += "<div class='col-md-3 col-xs-4'><p class='text-center'><a href='" + urls[0] + "' target='_balnk' class='aaa'><img height='60px' width='60px' src='https://www.baidu.com/favicon.ico' alt='...' class='img-circle'><br>	<span class='text1'>" + names[0] +"</span></a></p></div>"
+			AddHtml[i] += "<div class='col-md-3 col-xs-4'><p class='text-center'><a href='" + urls[i] + "' target='_balnk' class='aaa'><img height='60px' width='60px' src='https://www.baidu.com/favicon.ico' alt='...' class='img-circle'><br>	<span class='text1'>" + names[i] +"</span></a></p></div>"
 		}}
 	}
 
