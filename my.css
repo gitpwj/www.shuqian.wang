@@ -1,0 +1,10 @@
+.img-circle, .panel-heading {
+	cursor:move;
+}
+/*鼠标放上去图像放大*/
+.text-center:hover {
+	transform: scale(1.2);
+}
+.panel_title {
+	cursor:text;
+}
