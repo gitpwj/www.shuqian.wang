@@ -90,6 +90,8 @@ zairu.onclick = function() {
 	localStorage.setItem('names_111', JSON.stringify(names_111));
 	urls_111 = ["n1", "n2", "n3"];
 	localStorage.setItem('urls_111', JSON.stringify(urls_111));
+
+	
 	
 };
 

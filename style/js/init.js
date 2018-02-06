@@ -5,26 +5,19 @@ var storage = window.localStorage;
 var groups = JSON.parse(localStorage.getItem('group_name'));
 
 var AddHtml = new Array();　
-
+AddHtml[0] = "";
 for (var i = 0; i <= groups.length - 1; i++) {
 	var names = JSON.parse(localStorage.getItem('names_'+groups[i]));
-	console.log(names);
+	var urls = JSON.parse(localStorage.getItem('urls'+groups[i]));
+
+	for (var i = 0; i <= names.length - 1; i++) {
+		AddHtml[i] += "<div class='col-md-3 col-xs-4'><p class='text-center'><a href='" + urls[i] + "' target='_balnk' class='aaa'><img height='60px' width='60px' src='https://www.baidu.com/favicon.ico' alt='...' class='img-circle'><br>	<span class='text1'>" + names[i] + "</span></a></p></div>"
+	}
 }
 
 /*初始化界面 开始*/
 
-var x = 0;
 
-for (var i = 0; i <= names.length - 1; i++) {
-
-	if (names[i] != "|") {
-		AddHtml[x - 1] += "<div class='col-md-3 col-xs-4'><p class='text-center'><a href='" + urls[i] + "' target='_balnk' class='aaa'><img height='60px' width='60px' src='https://www.baidu.com/favicon.ico' alt='...' class='img-circle'><br>	<span class='text1'>" + names[i] + "</span></a></p></div>"
-	}
-	if (names[i] == "|") {
-		x = x + 1;
-		AddHtml[x - 1] = ""; //初始化 
-	}
-}
 
 //取组
 if (groups != "") {
