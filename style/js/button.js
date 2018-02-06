@@ -5,7 +5,7 @@ function js_del_zu(zu_name)
 	gname.splice($.inArray(String(zu_name), gname), 1); 
 	localStorage.setItem('group_name', JSON.stringify(gname));
 	alert("删除成功");
-	location.reload();(
+	location.reload();
 }
 
 var baocun = document.getElementById('baocun');
