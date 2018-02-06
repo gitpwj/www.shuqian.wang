@@ -7,7 +7,7 @@ var groups = JSON.parse(localStorage.getItem('group_name'));
 var AddHtml = new Array();　
 
 for (var i = 0; i <= groups.length - 1; i++) {
-	var names = JSON.parse(localStorage.getItem('names'+groups[i]));
+	var names = JSON.parse(localStorage.getItem('names_'+groups[i]));
 	console.log(names);
 }
 
