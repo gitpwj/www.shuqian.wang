@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <title>title</title>
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- 最新版本的 font-awesome 字体图标 核心 CSS 文件 -->
+        <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="shuqian.json"></script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <style>
+        /*定义图标尺寸*/
+        .img-circle {
+            height:64px;
+            width:64px;
+        }
+        /*去掉a标签下划线*/
+        a:link {
+            text-decoration:none;
+        }
+        a:visited {
+            text-decoration:none;
+        }
+        a:hover {
+            text-decoration:none;
+        }
+        a:active {
+            text-decoration:none;
+        }
+        /*鼠标悬停 图标放大*/
+        .pa:hover {
+            transform: scale(1.2);
+        }
+        </style>
+        <!-- 页眉 -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+
+                    </button> <a class="navbar-brand" id="title" href="#">title</a>
+
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://v3.bootcss.com/components/#glyphicons" target="_blank">图标</a>
+
+                        </li>
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- 页眉 结束 -->
+        <div class="container-fluid">
+            <div class="row" id="url_main">
+                <script type="text/javascript">
+                var content = "";
+                for (var i = 0; i < urls.length; i++) {
+                    content = content + "<div class='col-md-" + urls[i].group_width +
+                        "'><div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'><i class='fa fa-wrench'></i>　<b>" +
+                        urls[i].group_name + "</b></h3></div><div class='panel-body text-center' >";
+
+                    for (var j = 0; j < urls[i].items.length; j++) {
+                        content = content + "<!-- 书签 开始 -->";
+                        if (urls[i].group_width == 4) {
+                            content = content + "<div class='col-md-3 col-xs-4'>";
+                        }
+                        if (urls[i].group_width == 12) {
+                            content = content + "<div class='col-md-1 col-xs-1'>";
+                        }
+                        content = content + "<p class='text-center pa'>";
+                        content = content + "<a href='" + urls[i].items[j].item_url + "' target='_blank'><img src='" +
+                            urls[i].items[j].item_ico + "' alt='...' class='img-circle'><br>" + urls[i].items[j].item_name +
+                            "</a>";
+                        content = content + "</p></div>";
+
+                        content = content + "<!-- 书签 结束 -->";
+                    }
+                    content = content + "</div></div></div>";
+                }
+                $("#url_main").append(content);
+                 //修改页面标题
+                document.getElementById("title").innerHTML = page.page_title;
+                 //修改页面title
+                document.getElementsByTagName("title")[0].innerText = page.page_title;
+                </script>
+            </div>
+            <!-- row 结束 -->
+        </div>
+        <!-- container-fluid 结束 -->
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
