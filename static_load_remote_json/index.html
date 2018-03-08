@@ -13,11 +13,11 @@
         <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-        <script src="http://zhan5u.com/doing/menu.json"></script>
+        <script src="menu.json"></script>
         <script type="text/javascript">
         //根据当前页面锚点 加载不同的json文件
         if (location.hash == "") {
-            document.write("<script src='http://zhan5u.com/doing/index.json'><\/script>");
+            document.write("<script src='" + site.site_base_url + "index.json'><\/script>");
         } else {
             document.write("<script src='" + site.site_base_url + location.hash.replace('#', '') + ".json'><\/script>");
         }
