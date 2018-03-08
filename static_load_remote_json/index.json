@@ -1,0 +1,101 @@
+var urls = [{
+        "group_name": "项目追踪",
+        "group_ico": "fa-money",
+        "group_width": "4",
+        "items": [{
+                "item_name": "QL2018",
+                "item_url": "http://zhan5u.com/ql2018/index.html",
+                "item_ico": "ql.ico",
+            },
+        ],
+    }, {
+        "group_name": "图形图像",
+        "group_width": "4",
+        "group_ico": "fa-camera-retro",
+        "items": [{
+                "item_name": "在线ICO",
+                "item_url": "http://www.bitbug.net/",
+                "item_ico": "http://www.bitbug.net/favicon.ico",
+            }, {
+                "item_name": "美图",
+                "item_url": "http://xiuxiu.web.meitu.com/",
+                "item_ico": "http://xiuxiu.web.meitu.com/favicon.ico",
+            }
+        ],
+    }, {
+        "group_name": "在线编码",
+        "group_width": "4",
+        "group_ico": "fa-terminal",
+        "items": [{
+                "item_name": "runjs",
+                "item_url": "http://runjs.cn/",
+                "item_ico": "http://runjs.cn/favicon.ico",
+            }, {
+                "item_name": "码图",
+                "item_url": "http://www.matools.com/",
+                "item_ico": "http://www.matools.com/img/common/favicon.png",
+            }
+        ],
+    }, {
+        "group_name": "关注",
+        "group_width": "4",
+        "group_ico": "fa-eye",
+        "items": [{
+                "item_name": "zuanke8",
+                "item_url": "https://www.zuanke8.com/forum-15-1.html",
+                "item_ico": "https://www.zuanke8.com/favicon.ico",
+            }, {
+                "item_name": "极品党",
+                "item_url": "http://jipindang.com/",
+                "item_ico": "http://jipindang.com/wp-content/themes/grace7.01/img/favicon.ico",
+            }, {
+                "item_name": "AI",
+                "item_url": "https://developers.google.cn/machine-learning/crash-course/",
+                "item_ico": "https://developers.google.cn/favicon.ico",
+            }
+        ],
+    }, {
+        "group_name": "在线存储",
+        "group_width": "4",
+        "group_ico": "fa-database",
+        "items": [{
+                "item_name": "send",
+                "item_url": "https://send.firefox.com/",
+                "item_ico": "https://send.firefox.com/favicon-96.a2ce7c6e.png",
+            }
+        ],
+    }, {
+        "group_name": "专业搜索",
+        "group_width": "4",
+        "group_ico": "fa-search",
+        "items": [{
+                "item_name": "精灵",
+                "item_url": "https://www.yunpanjingling.com/",
+                "item_ico": "https://www.yunpanjingling.com/images/favicon.png",
+            }
+        ],
+    }, {
+        "group_name": "影音处理",
+        "group_width": "4",
+        "group_ico": "fa-video-camera",
+        "items": [{
+                "item_name": "videocyborg",
+                "item_url": "https://videocyborg.com/",
+                "item_ico": "https://videocyborg.com/media/favicon/favicon-32x32.png",
+            }
+        ],
+    }, {
+        "group_name": "在线办公",
+        "group_width": "4",
+        "group_ico": "fa-file-word-o",
+        "items": [{
+                "item_name": "笔记",
+                "item_url": "http://note.youdao.com/",
+                "item_ico": "http://note.youdao.com/favicon.ico",
+            }
+        ],
+    }
+]
+var page = {
+    "page_title": "常用书签",
+}
