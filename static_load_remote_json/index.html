@@ -13,7 +13,15 @@
         <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-        <script src="http://www.shuqian.wang/static_load_remote_json/shuqian.json"></script>
+        <script src="http://zhan5u.com/doing/menu.json"></script>
+        <script type="text/javascript">
+        //根据当前页面锚点 加载不同的json文件
+        if (location.hash == "") {
+            document.write("<script src='http://zhan5u.com/doing/index.json'><\/script>");
+        } else {
+            document.write("<script src='" + site.site_base_url + location.hash.replace('#', '') + ".json'><\/script>");
+        }
+        </script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -21,6 +29,7 @@
             <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
+    
     <body>
         <style>
         /*定义图标尺寸*/
@@ -56,11 +65,25 @@
  <span class="icon-bar"></span>
  <span class="icon-bar"></span>
 
-                    </button> <a class="navbar-brand" id="title" href="#">title</a>
+                    </button> <a class="navbar-brand" id="title" onclick='location.reload()' href="#">title</a>
 
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav" id="menu">
+                        <script type="text/javascript">
+                        //根据menu.json生成菜单
+                        var menu = "";
+                        for (var i = 0; i < menus.length; i++) {
+                            menu = menu + "<li>";
+                            menu = menu + "<a type='submit' onclick='location.reload()' href='" + site.site_base_url +
+                                "index.html#" + menus[i].menu_file_name + "'>" +
+                                menus[i].menu_name + "</a>";
+                            menu = menu + "</li>";
+                        }
+                        $("#menu").append(menu);
+                        </script>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="https://v3.bootcss.com/components/#glyphicons" target="_blank">图标</a>
 
@@ -78,12 +101,13 @@
         <div class="container-fluid">
             <div class="row" id="url_main">
                 <script type="text/javascript">
+                //根据加载的json文件生成页面布局
                 var content = "";
                 for (var i = 0; i < urls.length; i++) {
                     content = content + "<div class='col-md-" + urls[i].group_width +
-                        "'><div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'><i class='fa fa-wrench'></i>　<b>" +
+                        "'><div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'><i class='fa " +
+                        urls[i].group_ico + "'></i>　<b>" +
                         urls[i].group_name + "</b></h3></div><div class='panel-body text-center' >";
-
                     for (var j = 0; j < urls[i].items.length; j++) {
                         content = content + "<!-- 书签 开始 -->";
                         if (urls[i].group_width == 4) {
@@ -97,7 +121,6 @@
                             urls[i].items[j].item_ico + "' alt='...' class='img-circle'><br>" + urls[i].items[j].item_name +
                             "</a>";
                         content = content + "</p></div>";
-
                         content = content + "<!-- 书签 结束 -->";
                     }
                     content = content + "</div></div></div>";
@@ -115,4 +138,5 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
+
 </html>
