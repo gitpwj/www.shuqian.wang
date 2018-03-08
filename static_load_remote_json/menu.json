@@ -1,0 +1,12 @@
+var menus = [{
+        "menu_name": "项目追踪",
+        "menu_file_name": "5",
+    }, {
+        "menu_name": "图形图像",
+        "menu_file_name": "6",
+    }
+]
+
+var site = {
+    "site_base_url": "http://zhan5u.com/doing/",
+}
