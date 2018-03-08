@@ -8,5 +8,5 @@ var menus = [{
 ]
 
 var site = {
-    "site_base_url": "http://zhan5u.com/doing/",
+    "site_base_url": "http://www.shuqian.wang/static_load_remote_json/",
 }
